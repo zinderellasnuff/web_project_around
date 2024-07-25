@@ -19,4 +19,40 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .header {
+    padding: 45px 100px 40px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .header {
+    padding: 35px 50px 40px;
+  }
+
+  .header__logo {
+    width: 100%;
+    max-width: 173px;
+    display: block;
+    padding-bottom: 41px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    width: 100%;
+    max-width: 320px;
+    padding: 28px 0 38.25px 0;
+  }
+
+  .header__logo {
+    width: 100%;
+    max-width: 126px;
+    display: block;
+    padding: 0 0 32px 27px;
+  }
+
+  .header__line {
+    width: 100%;
+    max-width: 320px;
+  }
 }
