@@ -1,5 +1,6 @@
 .header {
-  padding: 45px 200px 40px;
+  width: 100%;
+  padding: 45px 0 0 0;
 }
 
 .header__logo {
@@ -18,41 +19,44 @@
   margin: 0;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 960px) {
   .header {
-    padding: 45px 100px 40px;
-  }
-}
-
-@media screen and (max-width: 610px) {
-  .header {
-    padding: 35px 50px 40px;
+    max-width: 540px;
+    padding: 28px 0 0 0;
   }
 
   .header__logo {
-    width: 100%;
-    max-width: 173px;
-    display: block;
-    padding-bottom: 41px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .header {
-    width: 100%;
-    max-width: 320px;
-    padding: 28px 0 38.25px 0;
-  }
-
-  .header__logo {
-    width: 100%;
-    max-width: 126px;
-    display: block;
+    max-width: 150px;
     padding: 0 0 32px 27px;
   }
+}
 
-  .header__line {
-    width: 100%;
+@media screen and (max-width: 340px) {
+  .header {
     max-width: 320px;
+    padding: 28px 0 0 0;
+  }
+
+  .header__logo {
+    max-width: 126px;
+    padding: 0 0 32px 27px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    max-width: 588px;
+    padding: 28px 0 0 0;
+  }
+
+  .header__logo {
+    max-width: 126px;
+    padding: 0 0 32px 0;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .header {
+    max-width: 880px;
   }
 }
