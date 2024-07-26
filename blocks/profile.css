@@ -25,11 +25,8 @@
   max-width: 415px;
   padding: 25.75px 0 24.75px 30px;
   display: grid;
-  grid-template-columns: repeat(
-    1,
-    2fr
-  ); /* Ajusta el tamaño de la segunda columna */
-  grid-template-rows: 1fr; /* Ajusta la altura de la fila */
+  grid-template-columns: repeat(1, 2fr);
+  grid-template-rows: 1fr;
 }
 
 .profile__info-name {
@@ -140,7 +137,7 @@
 
 @media screen and (max-width: 460px) {
   .profile {
-    max-width: 282px;
+    max-width: 320px;
   }
 
   .profile__image {
@@ -152,7 +149,7 @@
   }
 
   .profile__info-content {
-    max-width: 282px;
+    max-width: 320px;
     justify-content: center;
   }
 
@@ -163,7 +160,7 @@
   }
 
   .profile__info-subtitle {
-    max-width: 282px;
+    max-width: 320px;
     max-height: 25px;
     font-size: 14px;
     line-height: 16.94;

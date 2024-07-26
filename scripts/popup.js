@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Obtén los elementos necesarios
   const editButton = document.querySelector(".profile__info-button");
   const closeButton = document.querySelector(".popup__close-button");
   const popup = document.querySelector(".popup");
@@ -17,23 +16,22 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Cierra el popup
-  function closePopup() {
+  function closePopUp() {
     popup.style.display = "none";
   }
 
   // Maneja el envío del formulario
   function handleProfileFormSubmit(event) {
-    event.preventDefault(); // Evita el envío del formulario
+    event.preventDefault();
 
-    // Actualiza los datos del perfil
     profileName.textContent = nameInput.value;
     profileSubtitle.textContent = aboutInput.value;
 
-    closePopup(); // Cierra el popup
+    closePopUp();
   }
 
   // Asigna los eventos a los botones
   editButton.addEventListener("click", openPopup);
-  closeButton.addEventListener("click", closePopup);
+  closeButton.addEventListener("click", closePopUp);
   form.addEventListener("submit", handleProfileFormSubmit);
 });
