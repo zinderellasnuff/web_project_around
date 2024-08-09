@@ -7,6 +7,7 @@
   padding: 40px 0 0 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .profile__image {
@@ -215,18 +216,12 @@
   }
 
   .profile__button-add {
-    width: 100%;
-    width: 100px;
-    height: 40px;
+    max-width: 120px;
   }
 }
 
 @media screen and (min-width: 1120px) {
   .profile {
-    max-width: 880px;
-  }
-
-  .content {
     max-width: 880px;
   }
 }
