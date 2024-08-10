@@ -92,13 +92,13 @@ document.addEventListener("DOMContentLoaded", () => {
   function openModal(src, caption) {
     const modalElement = modalTemplate.cloneNode(true);
     const modal = modalElement.querySelector(".modal");
-    const modalImg = modalElement.querySelector(".modal__contenido");
+    const modalImg = modalElement.querySelector(".modal__image");
     const modalCaption = modalElement.querySelector(".modal__caption");
     const closeButton = modalElement.querySelector(".modal__close");
 
     modalImg.src = src;
     modalCaption.textContent = caption;
-    modal.style.display = "block";
+    modal.style.display = "flex";
 
     closeButton.addEventListener("click", () => {
       modal.style.display = "none";
