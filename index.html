@@ -13,7 +13,6 @@
       content="Viajes, Estados Unidos, Destinos, HTML, CSS, JavaScript, diseño web, desarrollo web"
     />
     <title>Alrededor De EEUU</title>
-
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
   <body>
@@ -22,7 +21,7 @@
         <img
           src="./images/logo.png"
           class="header__logo"
-          alt="Logotipo de nuestra pagina"
+          alt="Logotipo de nuestra página"
         />
         <hr class="header__line" />
       </header>
@@ -31,84 +30,118 @@
         <section class="profile">
           <img
             src="images/images__profile/profile__image-01.png"
-            alt="Foto De Perfil"
+            alt="Foto de Perfil"
             class="profile__image"
           />
           <div class="profile__info">
             <div class="profile__info-content">
               <h5 class="profile__info-name">Jacques Cousteau</h5>
-              <button class="profile__info-button"></button>
+              <button
+                class="profile__info-button"
+                aria-label="Editar perfil"
+              ></button>
             </div>
             <p class="profile__info-subtitle">Explorador</p>
           </div>
           <div class="profile__container">
-            <button class="profile__button-add"></button>
+            <button
+              class="profile__button-add"
+              aria-label="Añadir tarjeta"
+            ></button>
           </div>
         </section>
 
-        <section class="popup">
+        <!-- Edit Profile Popup -->
+        <section class="popup popup--edit-profile">
           <div class="popup__content">
-            <button class="popup__close-button">&times;</button>
+            <button class="popup__close-button" aria-label="Cerrar">
+              &times;
+            </button>
             <h2 class="popup__title">Editar Perfil</h2>
-            <form class="popup__form">
-              <label for="popup-name" class="popup__label"></label>
+            <form class="popup__form" name="profile-form" novalidate>
+              <label for="popup-name" class="popup__label">Nombre</label>
               <input
                 type="text"
                 id="popup-name"
                 name="name"
                 class="popup__input"
                 required
+                minlength="2"
+                maxlength="40"
               />
+              <span class="popup__error popup__error_name"></span>
 
-              <label for="popup-about" class="popup__label"
-                ></label
-              >
+              <label for="popup-about" class="popup__label">Sobre mí</label>
               <input
+                type="text"
                 id="popup-about"
                 name="about"
-                class="popup__textarea"
-                rows="4"
+                class="popup__input"
                 required
-              ></input>
+                minlength="2"
+                maxlength="200"
+              />
+              <span class="popup__error popup__error_about"></span>
 
-              <button type="submit" class="popup__save-button">Guardar</button>
+              <button
+                type="submit"
+                class="popup__button popup__button_disabled"
+                disabled
+              >
+                Guardar
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- Add Card Popup -->
+        <section class="popup popup--add-card">
+          <div class="popup__content">
+            <button
+              type="button"
+              class="popup__close-button"
+              aria-label="Cerrar"
+            >
+              &times;
+            </button>
+            <h2 class="popup__title">Nueva Tarjeta</h2>
+            <form
+              class="popup__form popup__form--add-card"
+              name="add-card-form"
+              novalidate
+            >
+              <label for="card-name" class="popup__label">Título</label>
+              <input
+                id="card-name"
+                type="text"
+                class="popup__input"
+                placeholder="Título"
+                minlength="2"
+                maxlength="30"
+                required
+              />
+              <span class="popup__error popup__error_card-name"></span>
+
+              <label for="card-image" class="popup__label"
+                >URL de la imagen</label
+              >
+              <input
+                id="card-image"
+                type="url"
+                class="popup__input"
+                placeholder="URL de la imagen"
+                required
+              />
+              <span class="popup__error popup__error_card-image"></span>
+
+              <button type="submit" class="popup__button">Guardar</button>
             </form>
           </div>
         </section>
 
         <section class="elements">
-          <div class="elements__container">
+          <div class="elements__container"></div>
         </section>
-
-        <section class="popup popup--add-card">
-          <div class="popup__content">
-            <button class="popup__close-button">&times;</button>
-            <h2 class="popup__title">Añadir Nueva Tarjeta</h2>
-            <form class="popup__form popup__form--add-card">
-              <label for="card-name" class="popup__label">Nombre</label>
-              <input
-                type="text"
-                id="card-name"
-                name="name"
-                class="popup__input"
-                required
-              />
-
-              <label for="card-image" class="popup__label">Enlace de Imagen</label>
-              <input
-                type="url"
-                id="card-image"
-                name="image"
-                class="popup__input"
-                required
-              />
-
-              <button type="submit" class="popup__save-button">Guardar</button>
-            </form>
-          </div>
-        </section>
-
-
       </main>
     </div>
     <footer class="footer">
@@ -117,29 +150,28 @@
 
     <template id="card-template">
       <article class="element__article">
-          <img
-          src=""
-          alt=""
-          class="element__img"
-        />
-        <button class="element__button-trash"></button>
+        <img src="" alt="" class="element__img" />
+        <button
+          class="element__button-trash"
+          aria-label="Eliminar tarjeta"
+        ></button>
         <div class="element__data">
           <h2 class="element__title"></h2>
-          <button class="element__button-like"></button>
+          <button class="element__button-like" aria-label="Me gusta"></button>
         </div>
-
       </article>
     </template>
 
     <template id="modal-template">
       <div class="modal">
         <div class="modal__content">
-          <span class="modal__close">&times;</span>
+          <span class="modal__close" aria-label="Cerrar">&times;</span>
           <img class="modal__image" />
           <p class="modal__caption"></p>
         </div>
       </div>
     </template>
-    <script src="./scripts/index.js"></script>
+    <script type="module" src="./scripts/validate.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>

@@ -1,7 +1,9 @@
+import { enableValidation, resetValidation } from "./validate.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   // Elementos de perfil
   const editButton = document.querySelector(".profile__info-button");
-  const profilePopup = document.querySelector(".popup");
+  const profilePopup = document.querySelector(".popup--edit-profile");
   const profileCloseButton = profilePopup.querySelector(".popup__close-button");
   const profileName = document.querySelector(".profile__info-name");
   const profileSubtitle = document.querySelector(".profile__info-subtitle");
@@ -27,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     profileNameInput.value = profileName.textContent;
     profileAboutInput.value = profileSubtitle.textContent;
     profilePopup.style.display = "flex";
+    resetValidation(profileForm, profileFormConfig);
   }
 
   function closeProfilePopup() {
@@ -43,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Funciones para añadir tarjetas
   function openAddCardPopup() {
     addCardPopup.style.display = "flex";
+    resetValidation(addCardForm, addCardFormConfig);
   }
 
   function closeAddCardPopup() {
@@ -75,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Eliminar tarjeta
     articleElement
       .querySelector(".element__button-trash")
-      .addEventListener("click", function () {
+      .addEventListener("click", () => {
         articleElement.remove();
       });
 
@@ -102,10 +106,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
     closeButton.addEventListener("click", () => {
       modal.style.display = "none";
+      document.body.removeChild(modalElement);
+    });
+
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+        document.body.removeChild(modalElement);
+      }
     });
 
     document.body.appendChild(modalElement);
   }
+
+  // Función para cerrar popup al hacer clic en la superposición
+  function closePopupOnOverlayClick(event) {
+    if (event.target === profilePopup) {
+      closeProfilePopup();
+    } else if (event.target === addCardPopup) {
+      closeAddCardPopup();
+    }
+  }
+
+  // Función para cerrar popup al presionar Esc
+  function closePopupOnEsc(event) {
+    if (event.key === "Escape") {
+      closeProfilePopup();
+      closeAddCardPopup();
+      const modals = document.querySelectorAll(".modal");
+      modals.forEach((modal) => {
+        modal.style.display = "none";
+        document.body.removeChild(modal);
+      });
+    }
+  }
+
+  // Configuraciones para validación
+  const profileFormConfig = {
+    formSelector: ".popup__form",
+    inputSelector: ".popup__input",
+    submitButtonSelector: ".popup__button",
+    inactiveButtonClass: "popup__button_disabled",
+    inputErrorClass: "popup__input_type_error",
+    errorClass: "popup__error_visible",
+  };
+
+  const addCardFormConfig = {
+    formSelector: ".popup__form--add-card",
+    inputSelector: ".popup__input",
+    submitButtonSelector: ".popup__button",
+    inactiveButtonClass: "popup__button_disabled",
+    inputErrorClass: "popup__input_type_error",
+    errorClass: "popup__error_visible",
+  };
 
   // Inicializa las tarjetas iniciales
   const initialCards = [
@@ -137,12 +190,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initialCards.forEach(addCard);
 
-  // Añadir event listeners
   editButton.addEventListener("click", openProfilePopup);
   profileCloseButton.addEventListener("click", closeProfilePopup);
-  profileForm.addEventListener("submit", handleProfileFormSubmit);
+  profilePopup.addEventListener("click", closePopupOnOverlayClick);
 
   addCardButton.addEventListener("click", openAddCardPopup);
   addCardCloseButton.addEventListener("click", closeAddCardPopup);
+  addCardPopup.addEventListener("click", closePopupOnOverlayClick);
+
+  profileForm.addEventListener("submit", handleProfileFormSubmit);
   addCardForm.addEventListener("submit", handleAddCardFormSubmit);
+
+  document.addEventListener("keydown", closePopupOnEsc);
+
+  // Activar la validación
+  enableValidation(profileFormConfig);
+  enableValidation(addCardFormConfig);
 });
