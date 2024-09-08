@@ -188,30 +188,6 @@
   box-sizing: content-box;
 }
 
-
-@media screen and (max-width: 340px) {
-  .card__data {
-    padding: 1rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .elements__container {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1.5rem;
-  }
-}
-
-@media screen and (min-width: 1120px) {
-  .elements {
-    max-width: 880px;
-  }
-
-  .elements__container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media screen and (max-width: 340px) {
   .card__data {
     padding: 1rem;
