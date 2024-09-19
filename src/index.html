@@ -12,14 +12,14 @@
       name="keywords"
       content="Viajes, Estados Unidos, Destinos, HTML, CSS, JavaScript, diseño web, desarrollo web"
     />
+
     <title>Alrededor De EEUU</title>
-    <link rel="stylesheet" href="./pages/index.css" />
   </head>
   <body>
     <div class="page">
       <header class="header">
         <img
-          src="./images/logo.png"
+          src="<%=require('./images/logo.png')%>"
           class="header__logo"
           alt="Logotipo de nuestra página"
         />
@@ -29,7 +29,7 @@
       <main>
         <section class="profile">
           <img
-            src="images/images__profile/profile__image-01.png"
+            src="<%=require('./images/images__profile/profile__image-01.png')%>"
             alt="Foto de Perfil"
             class="profile__image"
           />

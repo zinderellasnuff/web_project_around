@@ -12,7 +12,9 @@ export function openModal(src, caption) {
 
   const closeModal = () => {
     modal.style.display = "none";
-    document.body.removeChild(modalElement);
+    if (document.body.contains(modalElement)) {
+      document.body.removeChild(modalElement);
+    }
     document.removeEventListener("keydown", handleEscape);
   };
 

@@ -27,7 +27,8 @@
 .element__button-trash {
   z-index: 1;
   position: absolute;
-  background: url("../images/element__trash\(1\).svg") no-repeat center;
+  background: url("../images/images__element/element__trash.svg") no-repeat
+    center;
   background-size: contain;
   width: 20px;
   height: 20px;
@@ -122,7 +123,8 @@
 .element__button-trash {
   z-index: 1;
   position: absolute;
-  background: url("../images/element__trash\(1\).svg") no-repeat center;
+  background: url("../images/images__element/element__trash.svg") no-repeat
+    center;
   background-size: contain;
   width: 20px;
   height: 20px;
