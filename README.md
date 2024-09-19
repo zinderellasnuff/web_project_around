@@ -9,8 +9,8 @@ Este proyecto tiene como objetivo mejorar mis habilidades en la creación de pá
 ## Descripción de las Tecnologías y Técnicas Utilizadas 🛠️
 
 - **Lenguajes de Programación:** HTML, CSS y JS
-
 - **Herramientas de Desarrollo:** VSCode, Git y Github.
+- **Empaquetado de Módulos:** Webpack
 
 ## Enlace a GitHub Pages 🌐
 
@@ -20,11 +20,12 @@ Puedes ver la versión en vivo de este proyecto en [GitHub Pages](https://zinder
 
 ### Comentarios Básicos
 
-Diseño Responsivo con CSS: Se han implementado técnicas de diseño responsivo utilizando media queries en CSS. Esto permite ajustar el diseño y el contenido de la página dependiendo del tamaño de la pantalla del dispositivo.
+- **Diseño Responsivo con CSS:** Se han implementado técnicas de diseño responsivo utilizando media queries en CSS. Esto permite ajustar el diseño y el contenido de la página dependiendo del tamaño de la pantalla del dispositivo.
 
-Uso de Git y GitHub: El control de versiones se ha gestionado con Git, y el código se ha alojado en un repositorio de GitHub para facilitar la colaboración y el despliegue continuo.
-Imágenes y Multimedia Responsivas: Las imágenes y otros elementos multimedia se han optimizado para ser responsivos, utilizando unidades relativas y max-width para asegurar que se redimensionen adecuadamente.
+- **Uso de Git y GitHub:** El control de versiones se ha gestionado con Git, y el código se ha alojado en un repositorio de GitHub para facilitar la colaboración y el despliegue continuo.
 
-Imágenes y Multimedia Responsivas: Las imágenes y otros elementos multimedia se han optimizado para ser responsivos. Se han utilizado unidades relativas y propiedades como max-width para garantizar que estos elementos se redimensionen adecuadamente y mantengan su calidad en diferentes tamaños de pantalla.
+- **Imágenes y Multimedia Responsivas:** Las imágenes y otros elementos multimedia se han optimizado para ser responsivos, utilizando unidades relativas y propiedades como max-width para garantizar que estos elementos se redimensionen adecuadamente y mantengan su calidad en diferentes tamaños de pantalla.
 
-Desarrollo con JavaScript y DOM: El proyecto incluye la implementación de funcionalidades dinámicas utilizando JavaScript y el DOM (Document Object Model). Esto permite interacciones más complejas y la manipulación en tiempo real del contenido de la página, mejorando la experiencia del usuario.
+- **Desarrollo con JavaScript y DOM:** El proyecto incluye la implementación de funcionalidades dinámicas utilizando JavaScript y el DOM (Document Object Model). Esto permite interacciones más complejas y la manipulación en tiempo real del contenido de la página, mejorando la experiencia del usuario.
+
+- **Implementación de Webpack:** Webpack se ha utilizado para empaquetar los módulos de JavaScript, optimizando el rendimiento del proyecto y facilitando la gestión de dependencias y recursos.
