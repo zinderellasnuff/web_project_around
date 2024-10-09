@@ -4,7 +4,7 @@ web_project_around
 
 ## Descripción del Proyecto y su Funcionalidad 📖
 
-Este proyecto tiene como objetivo mejorar mis habilidades en la creación de páginas responsivas para celulares, tablets y pantallas grandes. Proporciona ejemplos y ejercicios prácticos para adaptar el contenido web a diferentes tamaños de pantalla, asegurando una experiencia de usuario óptima en cualquier dispositivo. En este proyecto, estoy trabajando con JavaScript, el DOM, y otras tecnologías relacionadas para crear una funcionalidad dinámica y mejorar la interactividad de la página.
+Este proyecto tiene como objetivo mejorar mis habilidades en la creación de páginas responsivas para celulares, tablets y pantallas grandes. Proporciona ejemplos y ejercicios prácticos para adaptar el contenido web a diferentes tamaños de pantalla, asegurando una experiencia de usuario óptima en cualquier dispositivo. En este proyecto, estoy trabajando con JavaScript, el DOM, APIs y otras tecnologías relacionadas para crear una funcionalidad dinámica y mejorar la interactividad de la página.
 
 ## Descripción de las Tecnologías y Técnicas Utilizadas 🛠️
 
@@ -27,5 +27,7 @@ Puedes ver la versión en vivo de este proyecto en [GitHub Pages](https://zinder
 - **Imágenes y Multimedia Responsivas:** Las imágenes y otros elementos multimedia se han optimizado para ser responsivos, utilizando unidades relativas y propiedades como max-width para garantizar que estos elementos se redimensionen adecuadamente y mantengan su calidad en diferentes tamaños de pantalla.
 
 - **Desarrollo con JavaScript y DOM:** El proyecto incluye la implementación de funcionalidades dinámicas utilizando JavaScript y el DOM (Document Object Model). Esto permite interacciones más complejas y la manipulación en tiempo real del contenido de la página, mejorando la experiencia del usuario.
+
+- **Trabajo con APIs:** Se ha integrado el uso de APIs para obtener datos externos y enriquecer la funcionalidad de la aplicación, permitiendo interacciones más ricas y actualizaciones en tiempo real.
 
 - **Implementación de Webpack:** Webpack se ha utilizado para empaquetar los módulos de JavaScript, optimizando el rendimiento del proyecto y facilitando la gestión de dependencias y recursos.
