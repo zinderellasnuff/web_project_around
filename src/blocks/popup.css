@@ -106,6 +106,83 @@
   box-sizing: border-box;
 }
 
+.popup__container {
+  width: 100%;
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 8px; /* Esquinas redondeadas */
+  max-width: 430px;
+  max-height: 181px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.title__popup-modification {
+  width: 100%;
+  max-width: 358px;
+  font-size: 24px;
+  padding: 34px 36px;
+  color: #333333;
+  display: flex;
+  font-weight: bold;
+  line-height: 29.25px;
+  margin: 0;
+}
+
+.popup__buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.popup__button-confirm {
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 14px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 358px;
+  margin-bottom: 36px;
+}
+
+.popup__button-confirm:hover,
+.popup__button-cancel:hover {
+  background-color: grey;
+}
+
+.popup-avatar__form {
+  width: 100%;
+  max-width: 358px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Espacio entre el input y el botón */
+}
+
+.popup-avatar__input {
+  width: 100%;
+  padding: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+}
+
+.popup-avatar__save-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.popup-avatar__save-button:hover {
+  background-color: grey;
+}
+
 @media screen and (max-width: 500px) {
   .popup__content {
     max-width: 282px;
@@ -118,5 +195,30 @@
   .popup__title {
     max-width: 238px;
     padding: 25px 22px 76px;
+  }
+
+  .popup-avatar__input {
+    max-width: 238px;
+    margin: 0 auto;
+  }
+
+  .popup-avatar__save-button {
+    max-width: 238px;
+    margin: 0 auto;
+  }
+
+  .popup__container {
+    max-width: 300px;
+  }
+
+  .title__popup-modification {
+    max-width: 358px;
+    padding: 24px 26px;
+  }
+
+  .popup__button-confirm {
+    padding: 14px 0;
+    max-width: 248px;
+    margin-bottom: 36px;
   }
 }

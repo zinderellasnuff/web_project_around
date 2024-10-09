@@ -1,6 +1,7 @@
 import PopupWithImage from "../components/PopupWithImage.js";
 import PopupWithForm from "../components/PopupWithForm.js";
 import FormValidator from "../components/FormValidator.js";
+import { Api } from "../components/Api.js";
 
 // Elementos del perfil
 export const editButton = document.querySelector(".profile__info-button");
@@ -29,6 +30,15 @@ export const cardImageInput = addCardPopup.querySelector("#card-image");
 // Contenedor de elementos
 export const elementsContainer = document.querySelector(".elements__container");
 
+// Constants for the avatar popup functionality
+export const avatarEditIcon = document.querySelector(
+  ".profile__avatar-edit-icon"
+); // Ícono de edición
+export const avatarPopup = document.querySelector(".popup-avatar");
+export const avatarCloseButton = document.querySelector(".popup__close-button");
+export const avatarForm = document.querySelector(".popup-avatar__form");
+export const avatarInput = document.querySelector("#avatar-url");
+
 // Configuración de validación
 export const profileFormConfig = {
   formSelector: ".popup__form",
@@ -47,6 +57,15 @@ export const addCardFormConfig = {
   inputErrorClass: "popup__input_type_error",
   errorClass: "popup__error_visible",
 };
+
+//Instancia Api
+export const api = new Api({
+  baseUrl: "https://around.nomoreparties.co/v1/web_es_10", // Asegúrate de que la URL sea correcta
+  headers: {
+    authorization: "541d0e53-114b-4fb1-9af0-b09c04c191b9", // Tu token de autorización
+    "Content-Type": "application/json",
+  },
+});
 
 // Tarjetas iniciales
 export const initialCards = [

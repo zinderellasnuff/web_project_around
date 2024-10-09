@@ -28,11 +28,20 @@
 
       <main>
         <section class="profile">
-          <img
-            src="<%=require('./images/images__profile/profile__image-01.png')%>"
-            alt="Foto de Perfil"
-            class="profile__image"
-          />
+          <div class="profile__avatar">
+            <img
+              src="<%=require('./images/images__profile/profile__image-01.png')%>"
+              alt="Foto de Perfil"
+              class="profile__image"
+            />
+            <div class="profile__avatar-edit-icon">
+              <img
+                src="<%=require('./images/profile__button-edit.svg')%>"
+                alt="Editar foto de perfil"
+              />
+            </div>
+          </div>
+
           <div class="profile__info">
             <div class="profile__info-content">
               <h5 class="profile__info-name">Jacques Cousteau</h5>
@@ -43,6 +52,7 @@
             </div>
             <p class="profile__info-subtitle">Explorador</p>
           </div>
+
           <div class="profile__container">
             <button
               class="profile__button-add"
@@ -50,6 +60,26 @@
             ></button>
           </div>
         </section>
+
+        <!-- Popup para actualizar la imagen de perfil -->
+        <div class="popup popup-avatar" style="display: none">
+          <div class="popup__content">
+            <button class="popup__close-button">&times;</button>
+            <h3 class="popup__title">Actualizar foto de perfil</h3>
+            <form class="popup-avatar__form">
+              <input
+                type="url"
+                id="avatar-url"
+                class="popup-avatar__input"
+                placeholder="Enlace de la nueva imagen"
+                required
+              />
+              <button type="submit" class="popup-avatar__save-button">
+                Guardar
+              </button>
+            </form>
+          </div>
+        </div>
 
         <!-- Edit Profile Popup -->
         <section class="popup popup--edit-profile">
@@ -142,6 +172,16 @@
         <section class="elements">
           <div class="elements__container"></div>
         </section>
+
+        <div class="popup popup_confirmation">
+          <div class="popup__container">
+            <button class="popup__close-button">&times;</button>
+            <h3 class="title__popup-modification">¿Estás seguro?</h3>
+            <div class="popup__buttons">
+              <button class="popup__button-confirm">Sí</button>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <footer class="footer">
@@ -149,7 +189,7 @@
     </footer>
 
     <template id="card-template">
-      <article class="element__article">
+      <article class="element__article" data-card-id="">
         <img src="" alt="" class="element__img" />
         <button
           class="element__button-trash"
@@ -157,6 +197,7 @@
         ></button>
         <div class="element__data">
           <h2 class="element__title"></h2>
+          <p class="element__likes-count"></p>
           <button class="element__button-like" aria-label="Me gusta"></button>
         </div>
       </article>
@@ -172,6 +213,6 @@
       </div>
     </template>
 
-    <script type="module" src="./scripts/index.js"></script>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

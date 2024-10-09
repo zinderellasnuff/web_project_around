@@ -164,6 +164,14 @@
   overflow: hidden;
 }
 
+.element__likes-count {
+  font-size: 16px; /* Tamaño de la fuente del contador */
+  color: #333; /* Color del texto */
+  align-self: center; /* Centra el contador verticalmente */
+  margin-left: auto;
+  font-weight: 600;
+}
+
 .element__button-like {
   background: url("../images/images__element/element__like.svg") no-repeat
     center;
@@ -172,6 +180,7 @@
   height: 16px;
   border: none;
   box-sizing: content-box;
+  margin-left: 5px;
 }
 
 .element__button-like:hover {
