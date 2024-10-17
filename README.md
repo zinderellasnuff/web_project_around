@@ -12,9 +12,11 @@ Este proyecto tiene como objetivo mejorar mis habilidades en la creación de pá
 - **Herramientas de Desarrollo:** VSCode, Git y Github.
 - **Empaquetado de Módulos:** Webpack
 
-## Enlace a GitHub Pages 🌐
+## Demo del Proyecto
 
-Puedes ver la versión en vivo de este proyecto en [GitHub Pages](https://zinderellasnuff.github.io/web_project_around/).
+Puedes ver el proyecto en acción visitando este enlace: [Web Project CoffeeShop](https://zinderellasnuff.github.io/web_project_around/).
+
+![Vista previa del proyecto](./src/images/image.png)
 
 ---
 
